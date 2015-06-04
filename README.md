@@ -1,7 +1,10 @@
-meteor-accounts-ui-bootstrap-3
+accounts-ui-angular-material - WIP
 ==============================
 
-Meteor accounts-ui styled with Twitter's Bootstrap 3, now with multi-language support.
+Meteor accounts-ui styled with Material Design. Based on the work of https://github.com/ianmartorell/meteor-accounts-ui-bootstrap-3 
+
+
+
 
 Installation
 ------------

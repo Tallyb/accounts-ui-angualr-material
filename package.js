@@ -1,9 +1,9 @@
 Package.describe({
 	name: 'tallyb:accounts-ui-angular-material',
 	summary: 'Material Design styled accounts ui for Angular-Meteor',
-	version: '0.1',
-	git: "https://github.com/ianmartorell/meteor-accounts-ui-bootstrap-3"
-})
+	version: '0.1.0',
+	git: "https://github.com/Tallyb/accounts-ui-angualr-material"
+});
 
 Package.on_use(function (api) {
 	api.use(['session@1.0.0',
@@ -13,20 +13,14 @@ Package.on_use(function (api) {
 		'underscore@1.0.0',
 		'templating@1.0.0',
 		'anti:i18n@0.4.3',
-		'urigo: angualr-meteor'
-		],'client')
+		'urigo: angualr',
+		'angular:angular-material'
+		],'client');
 
 	api.imply('accounts-base', ['client', 'server']);
 
-	// Allows the user of this package to choose their own Bootstrap
-	// implementation.
-	api.use(['twbs:bootstrap@3.3.1', 'nemo64:bootstrap@3.3.1_1'], 'client', {weak: true});
 	// Allows us to call Accounts.oauth.serviceNames, if there are any OAuth
 	// services.
-	api.use(['twbs:bootstrap@3.3.1', 'nemo64:bootstrap@3.3.1_1'], 'client', {weak: true});
-	// Allows us to call Accounts.oauth.serviceNames, if there are any OAuth
-	// services.
-
 	api.use('accounts-oauth@1.0.0', {weak: true});
 	// Allows us to directly test if accounts-password (which doesn't use
 	// Accounts.oauth.registerService) exists.
